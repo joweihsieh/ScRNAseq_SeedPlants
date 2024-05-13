@@ -1,0 +1,8 @@
+#!/bin/bash
+Rscript --slave overlapping.R integration_Cla14_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds
+Rscript --slave overlapping.R integration_Cla21_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds
+Rscript --slave overlapping.R integration_Cla24_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds
+Rscript --slave overlapping.R integration_EgrCla2k11_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds
+Rscript --slave overlapping.R integration_LchCla2k11_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds
+Rscript --slave overlapping.R integration_Ptrk10Cla2k11_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds
+Rscript --slave overlapping.R integration_TarCla2k11_an_2000_ft_500_kan_5_seed_42_md_0.3_nn_30_base.rds

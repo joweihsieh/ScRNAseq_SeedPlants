@@ -1,0 +1,407 @@
+{
+    "RAW_DATA_PATH" : "/home/woodydrylab/YCLlab_raw_data/YCLlab_Rawdata/RNA-seq",
+    "OTHER_DATA_PATH" : "/home/f06b22037/DiskArray_f06b22037/HDD2",
+    "REF_GENOME_FASTA" : {
+        "Ptr" : "/home/woodydrylab/HDD/GenomicsData/Populus_trichocarpa/Ptrichocarpa_533_v4.1/Ptrichocarpa_533_v4.0.fa",
+        "Egr" : "/home/woodydrylab/HDD/GenomicsData/Eucalyptus_grandis/Egrandis_297_v2.0/Egrandis_297_v2.0.fa",
+        "Tar" : "/home/woodydrylab/HDD/GenomicsData/Trochodendron_aralioides/Taralioides_20200702/Trochodendron_aralioides_chromosomes.fa",
+        "Lch" : "/home/woodydrylab/HDD/GenomicsData/Liriodendron_chinense/Liriodendron_chinense_20191212/LIR.pbjelly.reN.final.fasta",
+        "Cla" : "/home/woodydrylab/HDD/GenomicsData/Cunninghamia_lanceolata/Cunninghamia_lanceolata_Shuai/Lachesis_assembly_changed.fa"
+
+    },
+    "REF_MAX_INTRON_LENGTH" : {
+        "Ptr" : 21971,
+        "Egr" : 9190,
+        "Tar" : 399724,
+        "Lch" : 73464,
+        "Cla" : 498434
+    },
+    "REF_GENOME_GTF" : {
+        "Ptr" : "/home/woodydrylab/HDD/GenomicsData/Populus_trichocarpa/Ptrichocarpa_533_v4.1/Ptrichocarpa_533_v4.1.gene_addExon.gtf",
+        "Egr" : "/home/woodydrylab/HDD/GenomicsData/Eucalyptus_grandis/Egrandis_297_v2.0/Egrandis_297_v2.0.gene_addExon.gtf",
+        "Tar" : "/home/woodydrylab/HDD/GenomicsData/Trochodendron_aralioides/Taralioides_20200702/Trochodendron_aralioides_chromosomes_pasa2.longest.filter.gtf",
+        "Lch" : "/home/woodydrylab/HDD/GenomicsData/Liriodendron_chinense/Liriodendron_chinense_20191212/Liriodendron_chinense_addGeneIDandExon.gtf",
+        "Cla" : "/home/woodydrylab/HDD/GenomicsData/Cunninghamia_lanceolata/Cunninghamia_lanceolata_Shuai/Chr_genome_all_transcripts_final_gene.gtf"
+    },
+    "REF_SPECIES" :{
+        "Ptr" : "Ptr",
+        "Egr" : "Egr",
+        "Tar" : "Tar",
+        "Lch" : "Lch",
+
+        "PtrFiber1_1" : "Ptr",
+        "PtrFiber1_2" : "Ptr",
+        "PtrFiber1_3" : "Ptr",
+        "PtrFiber2_1" : "Ptr",
+        "PtrFiber2_2" : "Ptr",
+        "PtrFiber2_3" : "Ptr",
+        "PtrFiber2_4" : "Ptr",
+        "PtrRay1_1" : "Ptr",
+        "PtrRay1_2" : "Ptr",
+        "PtrRay1_3" : "Ptr",
+        "PtrVessel1_1" : "Ptr",
+        "PtrVessel1_2" : "Ptr",
+        "PtrVessel1_3" : "Ptr",
+        "PtrVessel2_1" : "Ptr",
+        "PtrVessel2_2" : "Ptr",
+        "PtrVessel2_3" : "Ptr",
+        "PtrVessel2_4" : "Ptr",
+        "PtrVessel2_5" : "Ptr",
+        "PtrVessel2_6" : "Ptr",
+        "PtrVessel3_1" : "Ptr",
+        "PtrVessel3_2" : "Ptr",
+        "PtrVessel3_3" : "Ptr",
+        "PtrVessel3_4" : "Ptr",
+        "PtrVessel3_5" : "Ptr",
+        "PtrVessel3_6" : "Ptr",
+
+        "Cla" : "Cla",
+        "Cla2" : "Cla",
+        "Cla4" : "Cla"
+
+
+
+    },
+    "HISAT2_THREADS" : {
+        "PtrFiber1_1" : "32",
+        "PtrFiber1_2" : "32",
+        "PtrFiber1_3" : "32",
+        "PtrFiber2_1" : "32",
+        "PtrFiber2_2" : "32",
+        "PtrFiber2_3" : "32",
+        "PtrFiber2_4" : "32",
+        "PtrRay1_1" : "32",
+        "PtrRay1_2" : "32",
+        "PtrRay1_3" : "32",
+        "PtrVessel1_1" : "32",
+        "PtrVessel1_2" : "32",
+        "PtrVessel1_3" : "32",
+        "PtrVessel2_1" : "32",
+        "PtrVessel2_2" : "32",
+        "PtrVessel2_3" : "32",
+        "PtrVessel2_4" : "32",
+        "PtrVessel2_5" : "32",
+        "PtrVessel2_6" : "32",
+        "PtrVessel3_1" : "32",
+        "PtrVessel3_2" : "32",
+        "PtrVessel3_3" : "32",
+        "PtrVessel3_4" : "32",
+        "PtrVessel3_5" : "32",
+        "PtrVessel3_6" : "32"
+
+    },
+    "SEQ_LENGTH" : {
+        "PtrFiber1_1" : 150,
+        "PtrFiber1_2" : 150,
+        "PtrFiber1_3" : 150,
+        "PtrFiber2_1" : 150,
+        "PtrFiber2_2" : 150,
+        "PtrFiber2_3" : 150,
+        "PtrFiber2_4" : 150,
+        "PtrRay1_1" : 150,
+        "PtrRay1_2" : 150,
+        "PtrRay1_3" : 150,
+        "PtrVessel1_1" : 150,
+        "PtrVessel1_2" : 150,
+        "PtrVessel1_3" : 150,
+        "PtrVessel2_1" : 150,
+        "PtrVessel2_2" : 150,
+        "PtrVessel2_3" : 150,
+        "PtrVessel2_4" : 150,
+        "PtrVessel2_5" : 150,
+        "PtrVessel2_6" : 150,
+        "PtrVessel3_1" : 150,
+        "PtrVessel3_2" : 150,
+        "PtrVessel3_3" : 150,
+        "PtrVessel3_4" : 150,
+        "PtrVessel3_5" : 150,
+        "PtrVessel3_6" : 150
+
+    },
+    "MQD_SAMPLE" : {
+        "PtrFiber1" : ["PtrFiber1_1", "PtrFiber1_2", "PtrFiber1_3"],
+        "PtrFiber2" : ["PtrFiber2_1", "PtrFiber2_2", "PtrFiber2_3", "PtrFiber2_4"],
+        "PtrRay1" : ["PtrRay1_1", "PtrRay1_2", "PtrRay1_3"],
+        "PtrVessel1" : ["PtrVessel1_1", "PtrVessel1_2", "PtrVessel1_3"],
+        "PtrVessel2" : ["PtrVessel2_1", "PtrVessel2_2", "PtrVessel2_3", "PtrVessel2_4", "PtrVessel2_5", "PtrVessel2_6"],
+        "PtrVessel3" : ["PtrVessel3_1", "PtrVessel3_2", "PtrVessel3_3", "PtrVessel3_4", "PtrVessel3_5", "PtrVessel3_6"]
+    },
+    "MQD_FASTQ" : {
+        "PtrFiber1_1" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtFiber_1_S5_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtFiber_1_S5_R2_001.fastq.gz"
+        ],
+        "PtrFiber1_2" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtFiber_2_S7_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtFiber_2_S7_R2_001.fastq.gz"
+        ],
+        "PtrFiber1_3" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtFiber_3_S10_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtFiber_3_S10_R2_001.fastq.gz"
+        ],
+        "PtrFiber2_1" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree1_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree1_2.fq.gz"
+        ],
+        "PtrFiber2_2" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree2_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree2_2.fq.gz"
+        ],
+        "PtrFiber2_3" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree3_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree3_2.fq.gz"
+        ],
+        "PtrFiber2_4" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree4_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_fiber-tree4_2.fq.gz"
+        ],
+        "PtrRay1_1" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtRay_1_S3_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtRay_1_S3_R2_001.fastq.gz"
+        ],
+        "PtrRay1_2" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtRay_2_S2_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtRay_2_S2_R2_001.fastq.gz"
+        ],
+        "PtrRay1_3" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtRay_3_S8_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtRay_3_S8_R2_001.fastq.gz"
+        ],
+        "PtrVessel1_1" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtVessel_1_S4_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtVessel_1_S4_R2_001.fastq.gz"
+        ],
+        "PtrVessel1_2" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtVessel_2_S6_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtVessel_2_S6_R2_001.fastq.gz"
+        ],
+        "PtrVessel1_3" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtVessel_3_S9_R1_001.fastq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane2/PtVessel_3_S9_R2_001.fastq.gz"
+        ],
+        "PtrVessel2_1" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree1_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree1_2.fq.gz"
+        ],
+        "PtrVessel2_2" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree2_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree2_2.fq.gz"
+        ],
+        "PtrVessel2_3" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree3_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree3_2.fq.gz"
+        ],
+        "PtrVessel2_4" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree4_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree4_2.fq.gz"
+        ],
+        "PtrVessel2_5" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree5_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree5_2.fq.gz"
+        ],
+        "PtrVessel2_6" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree6_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vessel-tree6_2.fq.gz"
+        ],
+        "PtrVessel3_1" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree1_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree1_2.fq.gz"
+        ],
+        "PtrVessel3_2" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree2_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree2_2.fq.gz"
+        ],
+        "PtrVessel3_3" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree3_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree3_2.fq.gz"
+        ],
+        "PtrVessel3_4" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree4_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree4_2.fq.gz"
+        ],
+        "PtrVessel3_5" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree5_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree5_2.fq.gz"
+        ],
+        "PtrVessel3_6" : [
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree6_1.fq.gz",
+            "RAW_DATA_PATH/04_LCM/Cell_type/VFR_Populus_trichocarpa/VFR_Populus_trichocarpa_Lane1/Populus_trichocarpa_vesseltangential-tree6_2.fq.gz"
+        ]
+    },
+    "FASTQ_FOLDER" : {
+        "Ptr" : [
+            "RAW_DATA_PATH/03_Single_cell_sequencing/TENxGenomics/TEN_Populus_trichocarpa/TEN_Populus_trichocarpa_Batch1/fastq_path/HS18186/YCL"
+        ],
+        "Lch" : [
+            "RAW_DATA_PATH/03_Single_cell_sequencing/TENxGenomics/TEN_Liriodendron_chinense/TEN_Liriodendron_chinense_Batch1/Rawdata"
+        ],
+        "Cla" : [
+            "/home/woodydrylab/DiskArray/f06b22037/HDD2/20220806_scseq_Cla/SC_Clanceolata/Rawdata/Cl"],
+        "Cla2" : [
+            "/home/woodydrylab/DiskArray/f06b22037/HDD2/20220806_scseq_Cla/SC_Clanceolata_Cl2_extra/X101SC21072446-Z01-J003/Rawdata/Cl2/"],
+        "Cla4" : [
+            "/home/woodydrylab/DiskArray/f06b22037/HDD2/20220806_scseq_Cla/SC_Clanceolata_Cl2andcl4/X101SC21072446-Z01-J002/Rawdata/Cl4/"]
+           
+    },
+    "CELLRANGER_SAMPLE_NAME" : {
+        "Ptr" : "YCL",
+        "Lch" : "scRNAseq-1,scRNAseq-2,scRNAseq-3,scRNAseq-4",
+        "Cla" : "Cl-1,Cl-2,Cl-3,Cl-4,Cl-5,Cl-6,Cl-7,Cl-8",
+        "Cla2" : "Cl2-1,Cl2-2,Cl2-3,Cl2-4,Cl2-5,Cl2-6,Cl2-7,Cl2-8,Cl2-9,Cl2-10,Cl2-11,Cl2-12,Cl2-13,Cl2-14,Cl2-15,Cl2-16,Cl2-17,Cl2-18,Cl2-19,Cl2-20",
+        "Cla4" : "Cl4-1,Cl4-2,Cl4-3,Cl4-4"
+
+
+    },
+    "CELLRANGER_BATCH" : {
+        "TenX_PtrAll" : ["TenX_Ptr", "TenX_Ptr2"],
+        "TenX_LchAll" : ["TenX_Lch", "TenX_Lch2", "TenX_Lch3", "TenX_Lch4", "TenX_Lch5"]
+    },
+    "CELLRANGER_BATCH_KIT" : {
+        "TenX_PtrAll" : ["v2", "v3"],
+        "TenX_LchAll" : ["TenX_Lch", "TenX_Lch2", "TenX_Lch3", "TenX_Lch4", "TenX_Lch5"]
+    },
+    "CELLRANGER_PARAMS" : {
+        "Ptr" : "./configs/Ptr_params.csv",
+        "Egr" : "./configs/Egr_params.csv",
+        "Tar" : "./configs/Tar_params.csv",
+        "Lch" : "./configs/Lch_params.csv",
+
+        "Cla" : "./configs/Cla_params.csv",
+        "Cla2" : "./configs/Cla_params.csv",
+        "Cla4" : "./configs/Cla_params.csv"
+
+    },
+    "CELLRANGER_N_CLUSTER" : {
+        "TenX_Ptr" : 10,
+        "MARSseq_Egr" : 10,
+        "MARSseq_Tar" : 18,
+        "TenX_Lch" : 10,
+        "TenX_Cla" : 11,
+        "TenX_Cla2" : 11,
+        "TenX_Cla4" : 11
+
+
+    },
+    "CELLRANGER_CLUSTER_COLOR" : {
+        "TenX_Ptr" : ["#1F77B4","#8C564B","#FF7F0F","#2AA02A","#F8E71C","#9467BD","#D62728","#E377C2","#9B9B9B","#4B4B4B"],
+        "MARSseq_Egr" : ["#9467BD","#F8E71C","#8C564B","#1F77B4","#2AA02A","#FF7F0F","#D62728","#E377C2","#4B4B4B","#9B9B9B"],
+        "MARSseq_Tar" : ["#1F77B4","#E377C2","#55A3FF","#8C564B","#9467BD","#FF7F0F","#46CBE5","#F8E71C","#2AA02A","#9B9B9B","#9B9B9B","#9B9B9B","#9B9B9B","#9B9B9B","#9B9B9B","#9B9B9B","#9B9B9B","#9B9B9B"],
+        "TenX_Lch" : ["#1F77B4","#8C564B","#D62728","#FF7F0F","#F8E71C","#E377C2","#9467BD","#2AA02A","#63EE9B","#9B9B9B"],
+        "TenX_Cla" : ["#1F77B4","#8C564B","#FF7F0F","#2AA02A","#F8E71C","#9467BD","#D62728","#E377C2","#9B9B9B","#4B4B4B","#33C7FF"],
+        "TenX_Cla2" : ["#1F77B4","#8C564B","#FF7F0F","#2AA02A","#F8E71C","#9467BD","#D62728","#E377C2","#9B9B9B","#4B4B4B","#33C7FF"],
+        "TenX_Cla4" : ["#1F77B4","#8C564B","#FF7F0F","#2AA02A","#F8E71C","#9467BD","#D62728","#E377C2","#9B9B9B","#4B4B4B","#33C7FF"]
+
+    },
+    "MARS_UMI_DIR" : {
+        "Egr": "RAW_DATA_PATH/03_Single_cell_sequencing/NextSeq/20220607_MARS-seq_organized/UMItable/Egr_batch1",
+        "Tar": "RAW_DATA_PATH/03_Single_cell_sequencing/NextSeq/20220607_MARS-seq_organized/UMItable/Tar_batch1"
+    },
+    "MARS_CDS_PATH" : {
+        "Egr": "RAW_DATA_PATH/03_Single_cell_sequencing/NextSeq/20220607_MARS-seq_organized/UMItable/Eg_CDS.txt",
+        "Tar": "RAW_DATA_PATH/03_Single_cell_sequencing/NextSeq/20220607_MARS-seq_organized/UMItable/Ta_CDS.txt"
+    },
+    "GROUP_For_SUMMARY" : {
+        "TenX_Ptr" : "Ptr_TenX",
+        "MARSseq_Egr" : "Egr_MARSseq",
+        "MARSseq_Tar" : "Tar_MARSseq",
+        "TenX_Lch" : "Lch_TenX",
+        "TenX_Cla" : "Cla_TenX",
+        "TenX_Cla2" : "Cla_TenX",
+        "TenX_Cla4" : "Cla_TenX"
+        
+
+
+    },
+    "SPECIES" :{
+        "TenX_Ptr" : "Ptr",
+        "MARSseq_Egr" : "Egr",
+        "MARSseq_Tar" : "Tar",
+        "TenX_Lch" : "Lch",
+        "TenX_Cla" : "Cla",
+        "TenX_Cla2" : "Cla",
+        "TenX_Cla4" : "Cla"
+
+
+    },
+    "MULTIBATCH" : {
+        "App2_PtrBatch4" : ["TenX_Ptr", "TenX_Ptr2", "MARSseq_Ptr3", "MARSseq_Ptr4"] 
+    },
+    "MULTISAMPLES" : {
+        "Ptrk10Cla2k11" : [
+            "TenX_Ptr",
+            "TenX_Cla2"
+        ],
+        "EgrCla2k11" : [
+            "MARSseq_Egr",
+            "TenX_Cla2"
+        ],
+        "TarCla2k11" : [
+            "MARSseq_Tar",
+            "TenX_Cla2"
+        ],
+        "LchCla2k11" : [
+            "TenX_Lch",
+            "TenX_Cla2"
+        ],   
+        "PtrEgrTarLchCla" : [
+            "TenX_Ptr",
+            "MARSseq_Egr",
+            "MARSseq_Tar",
+            "TenX_Lch",
+            "TenX_Cla2"
+        ],          
+        "Cla21" : [
+            "TenX_Cla2",
+            "TenX_Cla"
+        ],       
+        "Cla24" : [
+            "TenX_Cla2",
+            "TenX_Cla4"
+        ],       
+        "Cla14" : [
+            "TenX_Cla",
+            "TenX_Cla4"
+        ]
+
+        
+    },
+    "SEURAT_INTEGRATING_ORDER" : {
+        "Ptrk10Cla2k11" : [
+            -1, -2
+        ],
+        "EgrCla2k11" : [
+            -1, -2
+        ],
+        "TarCla2k11" : [
+            -1, -2
+        ],
+        "LchCla2k11" : [
+            -1, -2
+        ],
+        "PtrEgrTarLchCla" : [
+            -1, -2, 1, -3, 2, -4, 3, -5
+        ],
+        "Cla21": [
+            -1, -2
+        ],
+        "Cla24": [
+            -1, -2
+        ],
+        "Cla14": [
+            -1, -2
+        ]
+    },
+    "SEURAT_K_PARAM" : {
+        "Ptrk10Cla2k11" : 3,
+        "EgrCla2k11" : 3,
+        "TarCla2k11" : 3,
+        "LchCla2k11" : 3,
+        "PtrEgrTarLchCla" : 3,
+        "Cla21": 3,
+        "Cla24": 3,
+        "Cla14": 3
+    }
+}
+
+
+

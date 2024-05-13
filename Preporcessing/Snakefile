@@ -1,0 +1,351 @@
+import datetime
+DATE = datetime.date.today().strftime("%Y%m%d")
+
+
+# Setup config and functions ===================================================
+# Use docker image
+# container: "docker://f06b22037/bioinfobase:latest"
+
+# Load configuration file (as config)
+configfile: "./configs/config.json"
+
+# Include rules
+include: "rules/SS_MQD.smk"
+
+include: "rules/SS_single_cell_Cla.smk"
+
+include: "rules/SS_ortholog_Cla.smk"
+
+include: "rules/MS_single_cell_anchor.smk"
+
+
+# Define rules for execution ===================================================
+
+rule PtrEgrTarLchCla:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Ptr",
+                "MARSseq_Egr",
+                "MARSseq_Tar",
+                "TenX_Lch",
+                "TenX_Cla2"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "PtrEgrTarLchCla"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "PtrEgrTarLchCla"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+
+rule Cla21:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Cla2",
+                "TenX_Cla"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "Cla21"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "Cla21"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+rule Cla24:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Cla2",
+                "TenX_Cla4"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "Cla24"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "Cla24"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+
+rule Cla14:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Cla",
+                "TenX_Cla4"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "Cla14"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2500], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "Cla14"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2500], # [1000, 2000, 2000, 2000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+
+rule PtrCla2:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Ptr",
+                "MARSseq_Egr",
+                "MARSseq_Tar",
+                "TenX_Lch",
+                "TenX_Cla2"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "Ptrk10Cla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "Ptrk10Cla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+
+
+rule EgrCla2:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Ptr",
+                "MARSseq_Egr",
+                "MARSseq_Tar",
+                "TenX_Lch",
+                "TenX_Cla2"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "EgrCla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "EgrCla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+
+
+rule TarCla2:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Ptr",
+                "MARSseq_Egr",
+                "MARSseq_Tar",
+                "TenX_Lch",
+                "TenX_Cla2"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "TarCla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "TarCla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
+
+
+
+
+rule LchCla2:
+    input:
+        expand(
+            "results/Single_species_analysis/cellranger_reanalysis_{sample}",
+            sample = [
+                "TenX_Ptr",
+                "MARSseq_Egr",
+                "MARSseq_Tar",
+                "TenX_Lch",
+                "TenX_Cla2"
+            ]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_{level}/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            level = [
+                "sample"
+            ],
+            multisample = [
+                "LchCla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+        ),
+        expand(
+            "results/Multi_species_analysis/UMAP_by_species/integration_{multisample}_an_{anchor}_ft_{filters}_kan_{k_anchor}_seed_{seed_use}_md_{min_dist}_nn_{n_neighbors}",
+            multisample = [
+                "LchCla2k11"
+            ],
+            seed_use = [42], # [42, 12345, 231, 938, 29, 1, 948, 943, 377, 412, 9889, 20, 16, 21, 33, 23]
+            min_dist = [0.3], # [0.001, 0.1, 0.2, 0.3, 0.4, 0.5],
+            n_neighbors = [30], # [5, 10, 20, 30, 40 ,50],
+            anchor = [2000], # [1000, 1500, 2000, 3000]
+            filters = [500], # [200, 500, 700, 1000]
+            k_anchor = [5] # [5, 10]
+
+        )
