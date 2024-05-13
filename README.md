@@ -1,4 +1,4 @@
-# **Single-Cell RNA-seq**
+# **ScRNAseq in Seed Plants**
 
 This is the code repository for the manuscript titled "Single-Cell Transcriptomics Reveals Progressive Loss of Developmental Complexity of Xylem across Seed Plants".
 
