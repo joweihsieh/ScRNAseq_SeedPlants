@@ -1,5 +1,5 @@
 ################################################################
-#(2) High confident intra-cluster regionsHigh confident intra-cluster regions
+#(2) High confident intra-cluster regions
 ################################################################
 
 
