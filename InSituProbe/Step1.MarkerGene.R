@@ -26,7 +26,9 @@ suppressPackageStartupMessages({
 # ================================
 # Load Input Data
 # ================================
-clusters <- read.table("/path/to/projection_5sp_msUMAP_Cla2_like_Ptr_Lch_Tung_final_sscolor_ssclusters.csv", 
+
+
+clusters <- read.table("/home/f06b22037/DiskArray_f06b22037/SSD2/JW/1136project_SingleCell/results/JW_customized/MSC_clustering/PCA/projection_5sp_msUMAP_Cla2_like_Ptr_Lch_Tung_final_sscolor_ssclusters.csv", 
                        sep = "\t", header = TRUE)
 clusters <- clusters[, c("Barcode", "renew_3sp_cluster", "UMAP.1", "UMAP.2", "renew_3sp_colors")]
 rownames(clusters) <- clusters$Barcode
@@ -34,7 +36,7 @@ clusters <- clusters[, -1]
 colnames(clusters) <- c("Cluster", "UMAP.1", "UMAP.2", "Color")
 clusters <- clusters[!clusters$Cluster %in% c("Ptr_9", "Ptr_10"),]
 
-counts <- read.table("/path/to/geneUMI_TenX_Cla2.csv", sep = ",", header = TRUE, row.names = 1)
+counts <- read.table("/home/f06b22037/SSD2/JW/1136project_SingleCell/results/Single_species_analysis/all_UMI_tables/geneUMI_TenX_Cla2.csv", sep = ",", header = TRUE, row.names = 1)
 
 # ================================
 # Compute Size Factors
